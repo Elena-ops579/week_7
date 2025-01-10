@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Респонсивная верстка</title>
+    <link rel="stylesheet" href="grid.css" />
+    <style>
+      .header {
+        display: grid;
+        height: 4vw;
+        text-align: center;
+        padding-top: 20px;
+      }
+
+      .main_container {
+        display: grid;
+        text-align: center;
+        margin: 10px;
+        font-family: Arial, sans-serif;
+        background-color: #e1dbdb;
+      }
+
+      .container {
+        display: grid;
+        grid-template-columns: 70% 30%;
+      }
+
+      .mainpart {
+        background-color: #fafbd4;
+        padding: 2%;
+        text-align: center;
+        /* margin-top: 5%; */
+        padding: 2.5%;
+      }
+
+      .aside {
+        background-color: #acd28e;
+        padding: 2.5%;
+        text-align: center;
+      }
+
+      .container_1 {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        margin-top: 50px;
+      }
+
+      .another1,
+      .another2,
+      .another3 {
+        background-color: #e5fca5;
+        padding: 30px;
+        margin: 5px;
+        height: auto;
+        text-align: center;
+        flex: 1 1;
+        margin-top: 5%;
+      }
+
+      .another3 {
+        flex-basis: 100%;
+      }
+
+      .container_2 {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+        padding: 20px;
+        background-color: #e1dbdb;
+        justify-content: space-between;
+      }
+
+      .footer-section {
+        background-color: #fffbfb;
+        padding: 20px;
+        text-align: center;
+        flex: 1;
+        min-width: 150px;
+        margin-top: 20px;
+
+        box-sizing: border-box;
+      }
+
+      img {
+        max-width: 100%;
+        height: auto;
+      }
+
+      @media (max-width: 768px) {
+        .container {
+          grid-template-columns: 1fr;
+        }
+
+        .mainpart,
+        .aside {
+          height: auto;
+        }
+
+        .container_1 {
+          flex-direction: column;
+        }
+
+        .container_2 {
+          flex-direction: column;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="main_container">
+      <header class="header">
+        <strong>[Шапка страницы]</strong>
+      </header>
+      <main class="container">
+        <div class="mainpart">
+          <strong>[Основная часть]</strong>
+          <div class="container_1">
+            <div class="another1"><strong>[Еще 1]</strong></div>
+            <div class="another2"><strong>[Еще 2]</strong></div>
+            <div class="another3"><strong>[Еще 3]</strong></div>
+          </div>
+        </div>
+        <div class="aside"><strong>[Боковая область]</strong></div>
+      </main>
+      <footer class="container_2">
+        <div class="footer-section"><strong>[Секция футера 1]</strong></div>
+        <div class="footer-section"><strong>[Секция футера 2]</strong></div>
+        <div class="footer-section"><strong>[Секция футера 3]</strong></div>
+        <div class="footer-section"><strong>[Секция футера 4]</strong></div>
+      </footer>
+    </div>
+  </body>
+</html>
